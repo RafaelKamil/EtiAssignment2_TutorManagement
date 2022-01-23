@@ -18,6 +18,17 @@ import (
 var DB *gorm.DB
 var err error
 
+const ADB = "root:root@tcp(db:3306)/assignment2"
+
+func initialMigration() {
+	DB, err = gorm.Open(mysql.Open(ADB), &gorm.Config{})
+
+	if err != nil {
+		fmt.Println(err.Error())
+		panic("cant conenct to the Database Please check the coneections strings")
+	}
+	DB.AutoMigrate(&Tutor{})
+}
 func initializeRouter() {
 
 	router := mux.NewRouter()
@@ -43,18 +54,6 @@ type Tutor struct {
 	Lastname     string `json:"lastname" validate:"required"`
 	Email        string `json:"email" validate:"required,email"`
 	Descriptions string `json:"descriptions" validate:"required"`
-}
-
-const ADB = "root:root@tcp(db:3306)/assignment2"
-
-func initialMigration() {
-	DB, err = gorm.Open(mysql.Open(ADB), &gorm.Config{})
-
-	if err != nil {
-		fmt.Println(err.Error())
-		panic("cant conenct to the Database Please check the coneections strings")
-	}
-	DB.AutoMigrate(&Tutor{})
 }
 
 //Here is a fucntions to create new Tutor

@@ -11,11 +11,8 @@ services:
     environment:
       MYSQL_HOST: host.docker.internal
       MYSQL_ROOT_USER: root
-      MYSQL_TCP_PORT: 3306
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: assignment2
-    ports:
-      - 3306:3306
     deploy:
       restart_policy:
         condition: on-failure
