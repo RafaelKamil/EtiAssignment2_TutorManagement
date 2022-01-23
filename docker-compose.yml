@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  # MYSQL Database
+  db:
+    image: mysql:latest
+    container_name: assignment2tutor
+    hostname: db
+    networks:
+      - default
+    environment:
+      MYSQL_HOST: host.docker.internal
+      MYSQL_ROOT_USER: root
+      MYSQL_TCP_PORT: 3306
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: assignment2
+    ports:
+      - 3306:3306
+    deploy:
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - assingnment2volume:/var/lib/mysql
+
+  # Passenger Microservice
+  tutorcontainer:
+    depends_on:
+      - db
+    build:
+      context: ./Tutor
+      dockerfile: dockerfile.tutor
+    container_name: tutorcontainer
+    ports:
+      - 9181:9181
+ 
+ 
+networks:
+  default: null
+volumes:
+  assingnment2volume: null
+
+
+
