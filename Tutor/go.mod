@@ -1,4 +1,4 @@
-module DockerAssignment-2/Tutor
+module example.com
 
 go 1.17
 
