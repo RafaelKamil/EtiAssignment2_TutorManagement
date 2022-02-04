@@ -51,7 +51,7 @@ type Tutor struct {
 	Descriptions string `json:"descriptions" validate:"required"`
 }
 
-const ADB = "root:root@tcp(127.0.0.2:3306)/assignment2?charset=utf8mb4&parseTime=True&loc=Local"
+const ADB = "root:root@tcp(db:3306)/assignment2"
 
 func initialMigration() {
 	DB, err = gorm.Open(mysql.Open(ADB), &gorm.Config{})
