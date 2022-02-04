@@ -12,7 +12,6 @@ import (
 	"fmt"
 
 	"github.com/gorilla/handlers"
-
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
