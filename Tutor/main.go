@@ -41,6 +41,7 @@ func main() {
 
 }
 
+//Struct
 type Tutor struct {
 	Deleted      gorm.DeletedAt
 	TutorID      int    `jason:"tutor_id"gorm:"primaryKey"`
