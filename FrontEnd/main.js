@@ -128,7 +128,7 @@ async function deleteTutor() {
                 } else {
                     alert("Successfuly Delete Tutor Account!")
                         //calling 3.4 api 
-                    fetch("http://10.31.11.12:9141/api/v1/deleteassignedtutor/" + ChosenEmail, {
+                    fetch("http://10.31.11.12:9141/api/v1/module/deleteassignedtutor/" + ChosenEmail, {
                         method: 'DELETE',
                         body: JSON.stringify({
                             email: email,
