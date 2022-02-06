@@ -153,6 +153,24 @@ From Dockerhub
     Assignment-2\DockerAssignment-2 docker-compose> run --build
 
 
+Architecture diagram
+### Database
+once you create the database schema change the connections string as shown below for each micro service const ADB = "root:root(127.0.0.2:3306)/assignment2charset=utf8mb4&parseTime=True&loc=Local"
+
+root:root = your user account Change the user and password to the user you just create. example user:password@tcp
+
+(127.0.0.2:3306) here is the database IP. change it accordingly when you create.
+
+by default the if would be like this (127.0.0.1:3306)
+
+/assignment1= is the database nam, change the name accordingly to your newly created database
+
+Your connections string for Tutor management microservice should look like this 
+
+const ADB = "user:root (127.0.0.1:3306)/assignment2?charset=utf8mb4&parseTime=True&loc=Local
+
+Note: Do not remove ?charset=utf8mb4&parseTime=True&loc=Local
+
 
 <!-- USAGE EXAMPLES -->
 ## How to run the program
