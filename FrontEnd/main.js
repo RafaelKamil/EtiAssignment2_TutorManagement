@@ -22,7 +22,7 @@ function populateSelect() {
     var xhr = new XMLHttpRequest(),
         method = 'GET',
         overrideMimeType = 'application/json',
-        url = 'http://localhost:9181/api/v1/tutor/GetAllTutor';
+        url = 'http://10.31.11.12:9181/api/v1/tutor/GetAllTutor';
 
     // ADD THE URL OF THE FILE.
     xhr.onreadystatechange = function() {
@@ -73,7 +73,7 @@ async function updateTutor() {
         var email = document.getElementById('email').value
         var descriptions = document.getElementById('descriptions').value
             //fetch the update a tutor by email api
-        fetch("http://localhost:9181/api/v1/tutor/UpdateTutorAccountByEmail/" + ChosenEmail, {
+        fetch("http://10.31.11.12:9181/api/v1/tutor/UpdateTutorAccountByEmail/" + ChosenEmail, {
                 method: 'PUT',
                 body: JSON.stringify({
                     name: name,
@@ -109,7 +109,7 @@ async function deleteTutor() {
         var email = document.getElementById('email').value
         var descriptions = document.getElementById('descriptions').value
             //fetch the delete a tutor api
-        fetch("http://localhost:9181/api/v1/tutor/DeleteTutorAccountByEamil/" + ChosenEmail, {
+        fetch("http://10.31.11.12:9181/api/v1/tutor/DeleteTutorAccountByEamil/" + ChosenEmail, {
                 method: 'DELETE',
                 body: JSON.stringify({
                     name: name,
@@ -128,7 +128,7 @@ async function deleteTutor() {
                 } else {
                     alert("Successfuly Delete Tutor Account!")
                         //calling 3.4 api 
-                    fetch("http://localhost:9141/api/v1/deleteassignedtutor/" + ChosenEmail, {
+                    fetch("http://10.31.11.12:9141/api/v1/deleteassignedtutor/" + ChosenEmail, {
                         method: 'DELETE',
                         body: JSON.stringify({
                             email: email,
@@ -155,7 +155,7 @@ async function createTutor() {
         var email = document.getElementById('email').value
         var descriptions = document.getElementById('descriptions').value
             //fetch the create a tutor api
-        fetch("http://localhost:9181/api/v1/tutor/CreateNewTutor", {
+        fetch("http://10.31.11.12:9181/api/v1/tutor/CreateNewTutor", {
                 method: 'POST',
                 body: JSON.stringify({
                     name: name,
@@ -188,7 +188,7 @@ document.getElementById("search").onsubmit = SearchEmail
 async function displayAPIData() {
     //get all tutor api
     const response = await fetch(
-        "http://localhost:9181/api/v1/tutor/GetAllTutor"
+        "http://10.31.11.12:9181/api/v1/tutor/GetAllTutor"
     );
     tutors = await response.json();
 
