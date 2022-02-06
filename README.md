@@ -163,7 +163,7 @@ From Dockerhub
 <!-- ROADMAP -->
 ## Roadmap
 
-- [] Create Databas Schema and the account
+- [] Create Databas Schema and the Tutor Data
 - [] Create the microservices (Tutor Management)
 - [] Create front end 
 
