@@ -51,6 +51,7 @@ Tutor ID, Name, Description, Tutor ID, Name, Description,
 * [HTML](https://en.wikipedia.org/wiki/HTML)
 * [Bootstrap](https://getbootstrap.com/)
 * [MySql](https://www.mysql.com/)
+* [Nginx](https://www.nginx.com/)
 
 
 <!-- GETTING STARTED -->
