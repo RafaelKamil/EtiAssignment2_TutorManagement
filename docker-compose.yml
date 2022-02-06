@@ -40,7 +40,7 @@ services:
     depends_on:
       - db
     build:
-      context: ./tutor
+      context: ./Tutor
       dockerfile: dockerfile.tutor
     container_name: Rafaelkamil_TutorManagementContainer
     ports:
