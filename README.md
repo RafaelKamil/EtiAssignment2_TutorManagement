@@ -124,12 +124,15 @@ From Dockerhub
 1. Clone the repo From my Github 
 
   Microservice Backend
+    https://hub.docker.com/repository/docker/rafaelkamil/assignment2_backend_tutormanagement
      <li> docker pull rafaelkamil/assignment2_modulemanagementcontainer</li>
   
   Front end
+    https://hub.docker.com/repository/docker/rafaelkamil/assignment2_frontend_tutormanagement
     <li> docker pull rafaelkamil/assignment2_backend_tutormanagement</li>
  
  Database
+    https://hub.docker.com/repository/docker/rafaelkamil/assignment2_database_tutormanagement
     <li>docker pull rafaelkamil/assignment2_database_tutormanagement</li>
 
 
