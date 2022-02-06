@@ -91,6 +91,17 @@ async function updateTutor() {
                     return
                 } else {
                     alert("Successfuly Update Tutor Account!")
+                    fetch("http://10.31.11.12:9141/api/v1/module/tutor/updateassignedtutor/" + ChosenEmail, {
+                        method: 'PUT',
+                        body: JSON.stringify({
+                            name: name,
+                            email: email,
+                            descriptions: descriptions
+                        }),
+                        headers: {
+                            "Content-Type": "application/json; charset=UTF-8"
+                        }
+                    })
                 }
             })
     })
