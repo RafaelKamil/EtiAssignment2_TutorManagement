@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <title>Testing</title>
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+                initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Create Tutor Account</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped my-4
+                        table-hover">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8 py-3">
+                            <h2 class="text-uppercase text-center">Create Tutor
+                            </h2>
+                            <hr style="width: 110px; text-align: center;
+                                        border-width: 3px;
+                                        border-color:#17A2B8">
+                            <br>
+                            <!-- Create new tutor form -->
+                            <form id="createNewTutor" onsubmit="return validateForm()" name="createtutor">
+                                <div class="container" align="left">
+                                    <a type="button" class="btn btn-info" href="./index.html">Back</a>
+                                </div>
+                                <br>
+                                <label for="firstname">Name:</label>
+                                <input type="text" id="name" class="form-control" placeholder="Name" style="border-color:#17A2B8" name="Name">
+                                <br>
+                                <label for="firstname">Email:</label>
+                                <input type="text" id="email" class="form-control" placeholder="Email" style="border-color:#17A2B8" name="Email">
+                                <br>
+                                <label for="firstname">Descriptions:</label>
+                                <input type="text" id="descriptions" class="form-control" placeholder="Descriptions" style="border-color:#17A2B8" name="Descriptions">
+                                <br>
+                                <!-- Button to create new tutor -->
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-lg btn-block btn-info " id="search_btn">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+</body>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./main.js"></script>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <title>Testing</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+                initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Create Tutor Account</title>
+</head>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped my-4
+                    table-hover">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 py-3">
+                        <h2 class="text-uppercase text-center">Update and Delete Tutor Account
+                        </h2>
+                        <hr style="width: 110px; text-align: center;
+                                    border-width: 3px;
+                                    border-color:#17A2B8">
+                        <br>
+                        <form id="updateTutor">
+                            <br>
+                            <div class="container" align="center">
+                                <select id="sel" onchange="show(this)" class="btn" style="border-color:#17A2B8">
+                                        <option value="">-- Select a Tutor Email --</option>
+                                    </select>
+                            </div>
+                            <div class="container" align="left">
+                                <a type="button" class="btn btn-info" href="./index.html">Back</a>
+                            </div>
+                            <form id="updateTutor">
+                                <br>
+                                <br>
+                                <p id="listemails"></p>
+                                <label for="email">Email address:</label>
+                                <input type="text" id="email" name="email" class="form-control" style="border-color:#17A2B8">
+                                <br>
+                                <label for="firstname">Name:</label>
+                                <input type="text" id="name" name="name" class="form-control" style="border-color:#17A2B8">
+                                <br>
+                                <label for="lastname">Descriptions:</label>
+                                <input type="text" id="descriptions" name="descriptions" class="form-control" style="border-color:#17A2B8">
+                                <br>
+
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-lg
+                                            btn-block btn-info" id="search_btn">Update
+                                            Tutor Account</button>
+                                </div>
+                                <br>
+                                <div class="col-md-12 text-center">
+                                    <button onclick="deletetutor()" class="btn btn-lg btn-block btn-info" id="deletetutor">Delete Tutor Account </button>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+
+</html>

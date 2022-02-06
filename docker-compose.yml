@@ -4,7 +4,7 @@ services:
   # MYSQL Database
   db:
     image: mysql:latest
-    container_name: assignment2tutor
+    container_name: Rafaelkamil_Database_assignment2tutor
     hostname: db
     networks:
       - default
@@ -19,18 +19,34 @@ services:
     volumes:
       - assingnment2volume:/var/lib/mysql
 
-  # Passenger Microservice
+
+# Frontend
+  frontend:
+    build:
+      context: ./FrontEnd
+    image: tutor_management_frontend
+    container_name: Rafaelkamil_FrontEndContainer
+    depends_on:
+      - tutorcontainer
+    ports: 
+      - "9180:80"
+    environment:
+      - NGINX_PORT=80
+
+
+  # Tutor Microservice
+
   tutorcontainer:
     depends_on:
       - db
     build:
-      context: ./Tutor
+      context: ./tutor
       dockerfile: dockerfile.tutor
-    container_name: tutorcontainer
+    container_name: Rafaelkamil_TutorManagementContainer
     ports:
       - 9181:9181
- 
- 
+
+
 networks:
   default: null
 volumes:

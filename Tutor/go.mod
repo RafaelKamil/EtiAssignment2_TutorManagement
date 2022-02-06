@@ -1,4 +1,4 @@
-module example.com
+module Assignment-2/Tutor
 
 go 1.17
 

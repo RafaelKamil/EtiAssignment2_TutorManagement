@@ -1,0 +1,7 @@
+FROM nginx
+
+COPY index.html /usr/share/nginx/html
+COPY CreateTutor.html /usr/share/nginx/html
+COPY ListAllTutor.html /usr/share/nginx/html
+COPY UpdateTutorDetails.html /usr/share/nginx/html
+COPY main.js /usr/share/nginx/html

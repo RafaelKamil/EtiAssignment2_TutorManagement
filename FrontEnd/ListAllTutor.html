@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Tutor Management</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 py-3">
+                <h2 class="text-uppercase text-center">List Of Register Management</h2>
+                <hr style="width: 110px; text-align: center; border-width: 3px; border-color:#17A2B8">
+                <section id="Tutor Data" class="py-4">
+                    <div class="container" align="center">
+                        <div class="col-12">
+                            <form class="search" id="search" align="center">
+                                <input type="text" name="" placeholder="Enter Tutor email" id="searchBox" class="form-control" align="center" style="border-color:#17A2B8">
+                                <button type="submit" class="btn btn-lg btn-block btn-info " id="search_btn" align="center">Search</button>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+            <div class="container" align="left">
+                <!-- Back button to redirect to the main page -->
+                <a type="button" class="btn btn-info" href="./index.html">Back</a>
+            </div>
+            <div class="table-responsive">
+                <!-- Table lis for all tutor -->
+                <table class="table table-bordered table-striped  my-4 table-hover">
+                    <thead class="bg-info text-light">
+                        <tr>
+                            <th>Tutor ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Discriptions</th>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+            </section>
+        </div>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="main.js"></script>
+</body>
+
+</html>
+
+<script src="main.js"></script>
